@@ -8,7 +8,7 @@ read_r_file <- function(path) {
   return(code)
 }
 #setwd("C:/Users/Owner/Downloads/STAT 5430/project")
-#code_lines <- read_r_file("example_r_file.R")
+code_lines <- read_r_file("example_r_file.R")
 #print(code_lines)
 
 # Content Translators:
