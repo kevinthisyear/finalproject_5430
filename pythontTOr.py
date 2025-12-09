@@ -396,17 +396,17 @@ def translate_file(input_path: str) -> List[str]:
     return translate_structural_mixed(lines)
 
 def main():
-    # Change this to the file you want to translate
-    input_file = "example_python_file.py"
+    input_file = "example_python_file.py"    # change this to the file you want to translate
+    output_file = "translated.R"
+    
     if not os.path.exists(input_file):
-        print(f"Error: {input_file} not found. Set input_file in main().")
+        print(f"Error: {input_file} not found. Set file in main().")
         return
 
     r_lines = translate_file(input_file)
-    print("#### Translated R Code ####")
-    print("---------------------------")
-    for line in r_lines:
-        print(line)
+    with open(output_file, "w") as f:
+        for line in r_lines:
+            f.write(line + "\n")
 
 if __name__ == "__main__":
     main()
